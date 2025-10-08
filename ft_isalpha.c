@@ -6,11 +6,11 @@
 /*   By: lunsold <lunsold@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 14:33:00 by lunsold           #+#    #+#             */
-/*   Updated: 2025/10/08 17:13:59 by lunsold          ###   ########.fr       */
+/*   Updated: 2025/10/08 17:28:37 by lunsold          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int	c)
+int	ft_isalpha(int c)
 {
 	if (c >= 65 && c <= 90)
 		return (1);
