@@ -6,7 +6,16 @@
 /*   By: lunsold <lunsold@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 17:15:13 by lunsold           #+#    #+#             */
-/*   Updated: 2025/10/08 17:15:14 by lunsold          ###   ########.fr       */
+/*   Updated: 2025/10/08 17:37:02 by lunsold          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_isalnum(int c)
+{
+	if (c >= 48 && c <= 57)
+		return (1);
+	else if (c >= 65 && c <= 90)
+		return (1);
+	else if (c >= 97 && c <= 122)
+		return (1);
+}
