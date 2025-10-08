@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lunsold <lunsold@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/08 20:43:53 by lunsold           #+#    #+#             */
-/*   Updated: 2025/10/08 21:27:05 by lunsold          ###   ########.fr       */
+/*   Created: 2025/10/08 21:18:26 by lunsold           #+#    #+#             */
+/*   Updated: 2025/10/08 21:26:48 by lunsold          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void  *memcpy(void	*restrict dst, const void	*restrict src, size_t n)
+void	*memmove(void *dst, const void *src, size_t len)
 {
 	int	i;
 
 	i = 0;
-	while (i <= n)
+	while ((i != len) || (i == len))
 	{
 		((unsigned	char *)dst)[i] = ((unsigned	char *)src)[i];
 		i++;
