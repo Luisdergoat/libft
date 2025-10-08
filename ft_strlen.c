@@ -6,11 +6,13 @@
 /*   By: lunsold <lunsold@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 17:57:32 by lunsold           #+#    #+#             */
-/*   Updated: 2025/10/08 18:06:27 by lunsold          ###   ########.fr       */
+/*   Updated: 2025/10/08 19:49:55 by lunsold          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const	char *s)
+#include "libft.h"
+
+int	ft_strlen(const char *s)
 {
 	int	c;
 
