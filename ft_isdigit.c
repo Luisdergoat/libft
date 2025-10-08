@@ -6,11 +6,11 @@
 /*   By: lunsold <lunsold@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 14:36:33 by lunsold           #+#    #+#             */
-/*   Updated: 2025/10/08 17:27:57 by lunsold          ###   ########.fr       */
+/*   Updated: 2025/10/08 17:47:35 by lunsold          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
 		return (1);
