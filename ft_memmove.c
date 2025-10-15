@@ -6,7 +6,7 @@
 /*   By: lunsold <lunsold@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 21:18:26 by lunsold           #+#    #+#             */
-/*   Updated: 2025/10/09 13:21:58 by lunsold          ###   ########.fr       */
+/*   Updated: 2025/10/15 17:37:14 by lunsold          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int				i;
+	size_t			i;
 	unsigned char	temp[255];
 
 	i = 0;

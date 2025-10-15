@@ -6,17 +6,17 @@
 /*   By: lunsold <lunsold@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 09:04:39 by lunsold           #+#    #+#             */
-/*   Updated: 2025/10/14 09:23:45 by lunsold          ###   ########.fr       */
+/*   Updated: 2025/10/15 17:08:39 by lunsold          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-	char *ptr;
-	int total_size;
-	int i;
+	char	*ptr;
+	size_t	total_size;
+	size_t	i;
 
 	i = 0;
 	if (count == 0 || size == 0)
@@ -35,3 +35,29 @@ void *ft_calloc(size_t count, size_t size)
 	}
 	return (ptr);
 }
+// int	main(void)
+// {
+// 	size_t count;
+// 	size_t size;
+// 	void *result;
+// 	size_t i;
+
+// 	count = 5;
+// 	size = sizeof(int);
+// 	result = ft_calloc(count, size);
+// 	if (result)
+// 	{
+// 		printf("Allocated memory initialized to zero:\n");
+// 		for (i = 0; i < count; i++)
+// 		{
+// 			printf("%d ", ((int *)result)[i]);
+// 		}
+// 		printf("\n");
+// 		free(result);
+// 	}
+// 	else
+// 	{
+// 		printf("Failed to allocate memory.\n");
+// 	}
+// 	return (0);
+// }

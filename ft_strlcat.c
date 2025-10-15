@@ -6,16 +6,16 @@
 /*   By: lunsold <lunsold@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 21:43:47 by lunsold           #+#    #+#             */
-/*   Updated: 2025/10/09 12:55:21 by lunsold          ###   ########.fr       */
+/*   Updated: 2025/10/15 18:32:04 by lunsold          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	int	i;
-	int	r;
+	size_t	i;
+	size_t	r;
 
 	i = 0;
 	r = 0;
@@ -33,5 +33,5 @@ size_t	strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 		}
 		dst[i] = '\0';
 	}
-	return (dst);
+	return (i + r);
 }

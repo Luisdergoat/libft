@@ -6,13 +6,13 @@
 /*   By: lunsold <lunsold@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 11:28:48 by lunsold           #+#    #+#             */
-/*   Updated: 2025/10/13 11:32:11 by lunsold          ###   ########.fr       */
+/*   Updated: 2025/10/15 17:38:03 by lunsold          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	while (*s1 && (*s1 == *s2) && n)
 	{

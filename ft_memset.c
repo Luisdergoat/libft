@@ -6,7 +6,7 @@
 /*   By: lunsold <lunsold@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 18:09:55 by lunsold           #+#    #+#             */
-/*   Updated: 2025/10/08 19:49:51 by lunsold          ###   ########.fr       */
+/*   Updated: 2025/10/15 17:37:20 by lunsold          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	int	p;
+	size_t	p;
 
 	p = 0;
 	while (p < n)
