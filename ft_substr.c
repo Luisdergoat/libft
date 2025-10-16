@@ -36,24 +36,24 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (sub_str);
 }
 
-// int	main(void)
-// {
-// 	unsigned int	start;
-// 	size_t			len;
-// 	char			*result;
-// 	const char		*str = "Hello, World!";
+int	main(void)
+{
+	unsigned int	start;
+	size_t			len;
+	char			*result;
+	const char		*str = "Hello, World!";
 
-// 	start = 20;
-// 	len = 5;
-// 	result = ft_substr(str, start, len);
-// 	if (result)
-// 	{
-// 		printf("Substring: <%s>\n", result);
-// 		free(result);
-// 	}
-// 	else
-// 	{
-// 		printf("Failed to allocate memory for substring.\n");
-// 	}
-// 	return (0);
-// }
+	start = 20;
+	len = 5;
+	result = ft_substr(str, start, len);
+	if (result)
+	{
+		printf("Substring: <%s>\n", result);
+		free(result);
+	}
+	else
+	{
+		printf("Failed to allocate memory for substring.\n");
+	}
+	return (0);
+}

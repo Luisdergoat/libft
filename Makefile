@@ -6,7 +6,7 @@
 #    By: lunsold <lunsold@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/10 11:34:54 by lunsold           #+#    #+#              #
-#    Updated: 2025/10/15 18:40:55 by lunsold          ###   ########.fr        #
+#    Updated: 2025/10/15 18:59:56 by lunsold          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,12 +40,7 @@ ft_substr.c \
 ft_tolower.c \
 ft_toupper.c 
 
-OBJ_DIR	=	obj
-OBJ = $(SRC:%.c=$(OBJ_DIR)/%.o)
-
-$(OBJ_DIR)/%.o: %.c
-	mkdir -p $(OBJ_DIR)
-	cc ${CFLAGS} -c $< -o $@
+OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
@@ -54,7 +49,7 @@ $(NAME): $(OBJ)
 # 	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
 
 clean:
-	rm -rf $(OBJ_DIR)
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)
