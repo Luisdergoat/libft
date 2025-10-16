@@ -1,58 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lunsold <lunsold@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/16 12:09:38 by lunsold           #+#    #+#             */
-/*   Updated: 2025/10/16 12:40:58 by lunsold          ###   ########.fr       */
+/*   Created: 2025/10/16 16:58:22 by lunsold           #+#    #+#             */
+/*   Updated: 2025/10/16 17:19:39 by lunsold          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
-	int		s_len;
-	int		j;
-	char	*str;
+	char	*sub_str;
 
-	if (!s1 && s2)
+	if (!s1)
 		return (ft_strdup(""));
-	s_len = (ft_strlen(s1) + ft_strlen(s2));
-	str = malloc(s_len + 1);
-	if (!str)
-		return (NULL);
 	i = ft_strlen(s1);
-	j = 0;
-	str = ft_strdup(s1);
-	j = 0;
-	while (s2[j] != '\0')
+	sub_str = malloc(i + 1);
+	if (!sub_str)
+		return (NULL);
+	i = 0;
+	while (s1[i] != set[0])
 	{
-		str[i] = s2[j];
-		j++;
+		sub_str[i] = s1[i];
 		i++;
 	}
-	str[i] = '\0';
-	return (str);
+	sub_str[i] = '\0';
+	return (sub_str);
 }
 // int	main(void)
 // {
-// 	const char	*s1 = "Hello, ";
-// 	const char	*s2 = "world!";
+// 	const char	*s1 = "Hello, World!";
+// 	const char	*set = " World!";
 // 	char		*result;
 
-// 	result = ft_strjoin(s1, s2);
+// 	result = ft_strtrim(s1, set);
 // 	if (result)
 // 	{
-// 		printf("Joined string: %s\n", result);
+// 		printf("Trimmed string: %s\n", result);
 // 		free(result);
 // 	}
 // 	else
 // 	{
-// 		printf("Failed to allocate memory for joined string.\n");
+// 		printf("Failed to allocate memory for trimmed string.\n");
 // 	}
 // 	return (0);
 // }

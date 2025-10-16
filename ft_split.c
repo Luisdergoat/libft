@@ -1,41 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lunsold <lunsold@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/08 21:29:20 by lunsold           #+#    #+#             */
-/*   Updated: 2025/10/16 18:05:03 by lunsold          ###   ########.fr       */
+/*   Created: 2025/10/16 17:20:02 by lunsold           #+#    #+#             */
+/*   Updated: 2025/10/16 18:53:37 by lunsold          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+static int	ft_count_c(char *s, char start, char c)
 {
-	size_t	i;
+	int	i;
 
-	i = 0;
-	while (dst[i] != '\0' && i < dstsize)
+	i = start;
+	while (s[i] != c)
 	{
-		dst[i] = src[i];
 		i++;
 	}
-	dst[i] = '\0';
 	return (i);
 }
-// int	main(void)
-// {
-// 	char		dst[20];
-// 	const char	*src;
-// 	size_t		dstsize;
-// 	size_t		result;
+void	ft_counter(const char *s, char *counter, char c)
+{
+	counter[1] = 0;
+	counter[2] = 0;
+	counter[3] = 0;
+	counter[4] = ft_count_c(s, c);
+}
 
-// 	src = "Hello, World!";
-// 	dstsize = 10;
-// 	result = ft_strlcpy(dst, src, dstsize);
-// 	printf("Copied string: %s\n", dst);
-// 	printf("Total length: %zu\n", result);
-// 	return (0);
-// }
+char	**ft_split(char const *s, char c)
+{
+	char	**split;
+	int		counter[5];
+}

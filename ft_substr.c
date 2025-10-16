@@ -6,7 +6,7 @@
 /*   By: lunsold <lunsold@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 09:25:57 by lunsold           #+#    #+#             */
-/*   Updated: 2025/10/15 18:43:56 by lunsold          ###   ########.fr       */
+/*   Updated: 2025/10/16 18:05:33 by lunsold          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,24 +36,24 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (sub_str);
 }
 
-int	main(void)
-{
-	unsigned int	start;
-	size_t			len;
-	char			*result;
-	const char		*str = "Hello, World!";
+// int	main(void)
+// {
+// 	unsigned int	start;
+// 	size_t			len;
+// 	char			*result;
+// 	const char		*str = "Hello, World!";
 
-	start = 20;
-	len = 5;
-	result = ft_substr(str, start, len);
-	if (result)
-	{
-		printf("Substring: <%s>\n", result);
-		free(result);
-	}
-	else
-	{
-		printf("Failed to allocate memory for substring.\n");
-	}
-	return (0);
-}
+// 	start = 7;
+// 	len = 5;
+// 	result = ft_substr(str, start, len);
+// 	if (result)
+// 	{
+// 		printf("Substring: %s\n", result);
+// 		free(result);
+// 	}
+// 	else
+// 	{
+// 		printf("Failed to allocate memory for substring.\n");
+// 	}
+// 	return (0);
+// }
