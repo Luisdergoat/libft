@@ -6,7 +6,7 @@
 /*   By: lunsold <lunsold@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 21:29:20 by lunsold           #+#    #+#             */
-/*   Updated: 2025/10/16 18:05:03 by lunsold          ###   ########.fr       */
+/*   Updated: 2025/10/20 14:42:39 by lunsold          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,15 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 
 	i = 0;
-	while (dst[i] != '\0' && i < dstsize)
+	if (dstsize == 0)
+		return (ft_strlen(src));
+	while (src[i] != '\0' && i < dstsize - 1)
 	{
 		dst[i] = src[i];
 		i++;
 	}
 	dst[i] = '\0';
-	return (i);
+	return (ft_strlen(src));
 }
 // int	main(void)
 // {
@@ -33,7 +35,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 // 	size_t		result;
 
 // 	src = "Hello, World!";
-// 	dstsize = 10;
+// 	dstsize = 7;
 // 	result = ft_strlcpy(dst, src, dstsize);
 // 	printf("Copied string: %s\n", dst);
 // 	printf("Total length: %zu\n", result);

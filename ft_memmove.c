@@ -6,7 +6,7 @@
 /*   By: lunsold <lunsold@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 21:18:26 by lunsold           #+#    #+#             */
-/*   Updated: 2025/10/15 17:37:14 by lunsold          ###   ########.fr       */
+/*   Updated: 2025/10/20 17:27:00 by lunsold          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,27 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t			i;
-	unsigned char	temp[255];
+	size_t	i;
 
 	i = 0;
-	while (i < len)
+	if (len == 0 || dst == src)
+		return (dst);
+	if (dst < src)
 	{
-		temp[i] = ((unsigned char *)src)[i];
-		i++;
+		while (i < len)
+		{
+			((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+			i++;
+		}
 	}
-	i = 0;
-	while (i < len)
+	else
 	{
-		((unsigned char *)dst)[i] = temp[i];
-		i++;
+		i = len;
+		while (i > 0)
+		{
+			i--;
+			((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+		}
 	}
 	return (dst);
 }
@@ -36,22 +43,19 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 // int	main(void)
 // {
-// 	char src[] = "Hello, World!";
-// 	char dst[20];
+// 	char	src[] = "Hello, World!";
+// 	char	dst[20];
+// 	char	buffer[20] = "1234567890";
 
-// 	// // Beispiel 1: Normale Kopie
-// 	// ft_memmove(dst, src, 13);
+// 	// Beispiel 1: Normale Kopie
+// 	// ft_memmove(dst, src, 5);
 // 	// printf("dst nach memmove: %s\n", dst);
-
 // 	// Beispiel 2: Überlappende Bereiche (src < dst)
-// 	char buffer[20] = "1234567890";
-// 	ft_memmove(buffer + 3, buffer, 8);
-// 	printf("Überlappung (src < dst): %s\n", buffer);
-
+// 	// ft_memmove(buffer + 5, buffer, 10);
+// 	// printf("Überlappung (src < dst): %s\n", buffer);
 // 	// // Beispiel 3: Überlappende Bereiche (dst < src)
 // 	// strcpy(buffer, "abcdefghij");
 // 	// ft_memmove(buffer, buffer + 2, 8);
 // 	// printf("Überlappung (dst < src): %s\n", buffer);
-
 // 	return (0);
 // }

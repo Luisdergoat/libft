@@ -6,7 +6,7 @@
 /*   By: lunsold <lunsold@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 19:48:35 by lunsold           #+#    #+#             */
-/*   Updated: 2025/10/15 17:34:53 by lunsold          ###   ########.fr       */
+/*   Updated: 2025/10/20 14:00:29 by lunsold          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	ft_bzero(void *s, size_t n)
 	size_t	i;
 
 	i = 0;
-	while (i <= n)
+	while (i < n)
 	{
-		((unsigned char *)s)[i] = 48;
+		((unsigned char *)s)[i] = 0;
 		i++;
 	}
 	return ;

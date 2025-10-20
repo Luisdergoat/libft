@@ -6,7 +6,7 @@
 #    By: lunsold <lunsold@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/10 11:34:54 by lunsold           #+#    #+#              #
-#    Updated: 2025/10/16 17:51:57 by lunsold          ###   ########.fr        #
+#    Updated: 2025/10/20 17:44:43 by lunsold          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,9 @@ ft_tolower.c \
 ft_toupper.c \
 ft_strjoin.c \
 ft_strtrim.c \
-ft_split.c
+ft_split.c \
+ft_itoa.c \
+ft_strmapi.c
 
 OBJ = $(SRC:.c=.o)
 

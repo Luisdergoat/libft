@@ -6,7 +6,7 @@
 /*   By: lunsold <lunsold@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 17:20:02 by lunsold           #+#    #+#             */
-/*   Updated: 2025/10/20 11:38:50 by lunsold          ###   ########.fr       */
+/*   Updated: 2025/10/20 17:14:44 by lunsold          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ static int	ft_count_words(char const *s, char c)
 	}
 	return (word_counter);
 }
+
 static char	**free_string(char **split, int index)
 {
 	while (index >= 0)
@@ -34,6 +35,7 @@ static char	**free_string(char **split, int index)
 	free(split);
 	return (NULL);
 }
+
 static char	**create_substr(char **split, char const *s, char c, int index)
 {
 	int	start;
@@ -43,7 +45,7 @@ static char	**create_substr(char **split, char const *s, char c, int index)
 	counter = 0;
 	while (s[counter] != '\0')
 	{
-		while (s[counter] == c)
+		while (s[counter] == c && s[counter] != '\0')
 			counter++;
 		start = counter;
 		length = 0;
@@ -52,7 +54,7 @@ static char	**create_substr(char **split, char const *s, char c, int index)
 			counter++;
 			length++;
 		}
-		if (length >= 0)
+		if (length > 0)
 		{
 			split[index] = ft_substr(s, start, length);
 			if (split[index] == NULL)
@@ -81,30 +83,30 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (split);
 }
-int	main(void)
-{
-	char	**result;
-	char	*str;
-	char	delimiter;
-	int		i;
+// int	main(void)
+// {
+// 	char	**result;
+// 	char	*str;
+// 	char	delimiter;
+// 	int		i;
 
-	str = "Hello,,World,,This,is,a,test";
-	delimiter = ',';
-	result = ft_split(str, delimiter);
-	if (result)
-	{
-		i = 0;
-		while (result[i] != NULL)
-		{
-			printf("Substring %d: %s\n", i, result[i]);
-			free(result[i]);
-			i++;
-		}
-		free(result);
-	}
-	else
-	{
-		printf("Memory allocation failed\n");
-	}
-	return (0);
-}
+// 	str = ",,,,,,,,Hello,,World,,This,is,,,,,,a,test,,,,,";
+// 	delimiter = ',';
+// 	result = ft_split(str, delimiter);
+// 	if (result)
+// 	{
+// 		i = 0;
+// 		while (result[i] != NULL)
+// 		{
+// 			printf("Substring %d: %s\n", i, result[i]);
+// 			free(result[i]);
+// 			i++;
+// 		}
+// 		free(result);
+// 	}
+// 	else
+// 	{
+// 		printf("Memory allocation failed\n");
+// 	}
+// 	return (0);
+// }
