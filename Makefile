@@ -6,7 +6,7 @@
 #    By: lunsold <lunsold@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/10 11:34:54 by lunsold           #+#    #+#              #
-#    Updated: 2025/10/21 12:31:51 by lunsold          ###   ########.fr        #
+#    Updated: 2025/10/21 13:06:14 by lunsold          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,7 @@ ft_strtrim.c \
 ft_split.c \
 ft_itoa.c \
 ft_strmapi.c \
-ft_striteri \
+ft_striteri.c \
 ft_putchar_fd.c \
 ft_putstr_fd.c \
 ft_putendl_fd.c \

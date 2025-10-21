@@ -6,13 +6,13 @@
 /*   By: lunsold <lunsold@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 12:23:40 by lunsold           #+#    #+#             */
-/*   Updated: 2025/10/21 12:30:53 by lunsold          ###   ########.fr       */
+/*   Updated: 2025/10/21 12:52:39 by lunsold          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	char	output;
 
