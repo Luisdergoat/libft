@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/lunsold/42/libft/libft/output/ft_putnbr_fd'
+relocations:     []
+...
