@@ -6,7 +6,7 @@
 /*   By: lunsold <lunsold@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 12:04:57 by lunsold           #+#    #+#             */
-/*   Updated: 2025/10/21 12:52:37 by lunsold          ###   ########.fr       */
+/*   Updated: 2025/10/21 15:40:43 by lunsold          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void	ft_putstr_fd(char *s, int fd)
 		write(fd, &s[i], 1);
 		i++;
 	}
-	write(fd, "\0", 1);
 }
 // int main(void)
 // {

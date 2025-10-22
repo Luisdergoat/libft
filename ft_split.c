@@ -6,7 +6,7 @@
 /*   By: lunsold <lunsold@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 17:20:02 by lunsold           #+#    #+#             */
-/*   Updated: 2025/10/20 17:14:44 by lunsold          ###   ########.fr       */
+/*   Updated: 2025/10/21 16:22:59 by lunsold          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,20 @@ static int	ft_count_words(char const *s, char c)
 {
 	int	word_counter;
 	int	letter_counter;
+	int	in_word;
 
 	word_counter = 0;
 	letter_counter = 0;
+	in_word = 0;
 	while (s[letter_counter] != '\0')
 	{
 		if (s[letter_counter] == c)
+			in_word = 0;
+		else if (!in_word)
+		{
+			in_word = 1;
 			word_counter++;
+		}
 		letter_counter++;
 	}
 	return (word_counter);
@@ -30,7 +37,7 @@ static int	ft_count_words(char const *s, char c)
 
 static char	**free_string(char **split, int index)
 {
-	while (index >= 0)
+	while (index > 0)
 		free(split[--index]);
 	free(split);
 	return (NULL);
@@ -74,7 +81,7 @@ char	**ft_split(char const *s, char c)
 	index = 0;
 	if (!s)
 		return (NULL);
-	word_counter = ft_count_words(s, c);
+	word_counter = ft_count_words((char *)s, c);
 	split = (char **)malloc(sizeof(char *) * (word_counter + 1));
 	if (split == NULL)
 		return (NULL);

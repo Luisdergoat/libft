@@ -6,7 +6,7 @@
 #    By: lunsold <lunsold@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/10 11:34:54 by lunsold           #+#    #+#              #
-#    Updated: 2025/10/21 13:06:14 by lunsold          ###   ########.fr        #
+#    Updated: 2025/10/21 15:29:08 by lunsold          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,8 +18,8 @@ CFLAGS = -Wall -Wextra -Werror
 SRC = ft_atoi.c \
 ft_bzero.c \
 ft_calloc.c \
-ft_isalnum.c \
 ft_isalpha.c \
+ft_isalnum.c \
 ft_isascii.c \
 ft_isdigit.c \
 ft_isprint.c \
@@ -55,8 +55,10 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rcs $(NAME)
-# 	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+	ar rcs $(NAME) $(OBJ)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJ)

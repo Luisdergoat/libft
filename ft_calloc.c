@@ -6,7 +6,7 @@
 /*   By: lunsold <lunsold@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 09:04:39 by lunsold           #+#    #+#             */
-/*   Updated: 2025/10/15 17:08:39 by lunsold          ###   ########.fr       */
+/*   Updated: 2025/10/22 12:25:40 by lunsold          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,6 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	i;
 
 	i = 0;
-	if (count == 0 || size == 0)
-	{
-		count = 1;
-		size = 1;
-	}
 	total_size = count * size;
 	ptr = malloc(total_size);
 	if (!ptr)
